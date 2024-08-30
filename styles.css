@@ -1,1 +1,72 @@
 /*  your css code here. If applicable */
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.progress {
+    background-color: #3498db;
+    height: 4px;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+}
+
+.circle {
+    background-color: #fff;
+    border: 3px solid #e0e0e0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    transition: border-color 0.3s;
+}
+
+.circle.active {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
